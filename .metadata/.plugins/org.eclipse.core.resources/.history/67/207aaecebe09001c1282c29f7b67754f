@@ -1,0 +1,36 @@
+package findPY;
+
+public class Go {
+	public static void main(String[] args) {
+		Go go = new Go();
+		System.out.println(go.solution("pyYPtrgdgwPYp"));
+	}
+	
+	
+	
+	
+	boolean solution(String s) {
+        boolean answer = true;
+        s = s.toLowerCase();
+        int whereY = s.indexOf("y");
+        int whereP = s.indexOf("p");
+        
+        int cntY = 0;
+        int cntP = 0;
+        
+        while(whereY!=-1) {
+        	whereY = s.indexOf("y",whereY+1);
+        	cntY++;
+        }
+        while(whereP!=-1) {
+        	whereP = s.indexOf("p",whereP+1);
+        	cntP++;
+        }
+        
+        if(cntY!=cntP) {
+        	answer = false;
+        }
+
+        return answer;
+    }
+}

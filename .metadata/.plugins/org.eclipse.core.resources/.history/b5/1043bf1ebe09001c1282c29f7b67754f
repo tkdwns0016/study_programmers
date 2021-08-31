@@ -1,0 +1,22 @@
+package findPY;
+
+public class Go {
+	public static void main(String[] args) {
+		Go go = new Go();
+		System.out.println(go.solution("pyYPtrgdgwPyp"));
+	}
+	
+	
+	
+	
+	boolean solution(String s) {
+        boolean answer = true;
+        s.toLowerCase();
+        int whereY = s.indexOf(1);
+        int whereP = s.indexOf("p");
+        
+        System.out.println(whereY);
+
+        return answer;
+    }
+}
